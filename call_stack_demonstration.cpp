@@ -124,59 +124,37 @@ void method4() {
 
 void scenario1() {
     std::cout << "Entering scenario1" << std::endl;
-    std::cout << "Calling method1" << std::endl;
     method1();
-    std::cout << "Finished call of method1" << std::endl;
-    std::cout << "Calling method2" << std::endl;
     method2();
-    std::cout << "Finished call of method2" << std::endl;
-    std::cout << "Calling method3" << std::endl;
     method3();
-    std::cout << "Finished call of method3" << std::endl;
-    std::cout << "Calling method4" << std::endl;
     method4();
-    std::cout << "Finished call of method4" << std::endl;
     std::cout << "Exiting scenario1" << std::endl;
 }
 
 void scenario2() {
     std::cout << "Entering scenario2" << std::endl;
-    std::cout << "Calling method3" << std::endl;
     method3();
-    std::cout << "Finished call of method3" << std::endl;
-    std::cout << "Calling method2" << std::endl;
     method2();
-    std::cout << "Finished call of method2" << std::endl;
-    std::cout << "Calling method4" << std::endl;
     method4();
-    std::cout << "Finished call of method4" << std::endl;
-    std::cout << "Calling method1" << std::endl;
     method1();
-    std::cout << "Finished call of method1" << std::endl;
     std::cout << "Exiting scenario2" << std::endl;
 }
 
 void sequential_call_method1() {
     std::cout << "Entering sequential_call_method1" << std::endl;
-    std::cout << "Calling sequential_call_method2" << std::endl;
     sequential_call_method2();
-    std::cout << "Finished call of sequential_call_method2" << std::endl;
     std::cout << "Exiting sequential_call_method1" << std::endl;
 }
 
 void sequential_call_method2() {
     std::cout << "Entering sequential_call_method2" << std::endl;
-    std::cout << "Calling sequential_call_method3" << std::endl;
     sequential_call_method3();
-    std::cout << "Finished call of sequential_call_method3" << std::endl;
     std::cout << "Exiting sequential_call_method2" << std::endl;
 }
 
 void sequential_call_method3() {
     std::cout << "Entering sequential_call_method3" << std::endl;
-    std::cout << "Calling sequential_call_method4" << std::endl;
     sequential_call_method4();
-    std::cout << "Finished call of sequential_call_method4" << std::endl;
     std::cout << "Exiting sequential_call_method3" << std::endl;
 }
 
@@ -187,19 +165,13 @@ void sequential_call_method4() {
 
 void scenario3() {
     std::cout << "Entering scenario3" << std::endl;
-    std::cout << "Calling sequential_call_method1" << std::endl;
     sequential_call_method1();
-    std::cout << "Finished call of sequential_call_method1" << std::endl;
     std::cout << "Exiting scenario3" << std::endl;
 }
 
 void scenario4() {
     std::cout << "Entering scenario4" << std::endl;
-    std::cout << "Calling sequential_call_method3" << std::endl;
     sequential_call_method3();
-    std::cout << "Finished call of sequential_call_method3" << std::endl;
-    std::cout << "Calling sequential_call_method2" << std::endl;
     sequential_call_method2();
-    std::cout << "Finished call of sequential_method2" << std::endl;
     std::cout << "Exiting scenario4" << std::endl;
 }
