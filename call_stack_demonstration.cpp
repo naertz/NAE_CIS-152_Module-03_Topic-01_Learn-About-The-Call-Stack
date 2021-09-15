@@ -24,10 +24,10 @@ void method4();
 void scenario1();
 void scenario2();
 
-void sequential_call_method1();
-void sequential_call_method2();
-void sequential_call_method3();
-void sequential_call_method4();
+void daisy_chain_method1();
+void daisy_chain_method2();
+void daisy_chain_method3();
+void daisy_chain_method4();
 
 void scenario3();
 void scenario4();
@@ -77,28 +77,28 @@ int main() {
     std::cout << std::endl;
 
     scenario3();                                // push(scenario3)
-                                                // push(sequential_call_method1)
-                                                // push(sequential_call_method2)
-                                                // push(sequential_call_method3)
-                                                // push(sequential_call_method4)
-                                                // pop(sequential_call_method4)
-                                                // pop(sequential_call_method3)
-                                                // pop(sequential_call_method2)
-                                                // pop(sequential_call_method1)
+                                                // push(daisy_chain_method1)
+                                                // push(daisy_chain_method2)
+                                                // push(daisy_chain_method3)
+                                                // push(daisy_chain_method4)
+                                                // pop(daisy_chain_method4)
+                                                // pop(daisy_chain_method3)
+                                                // pop(daisy_chain_method2)
+                                                // pop(daisy_chain_method1)
                                                 // pop(scenario3)
     std::cout << std::endl;
 
     scenario4();                                // push(scenario4)
-                                                // push(sequential_call_method3)
-                                                // push(sequential_call_method4)
-                                                // pop(sequential_call_method4)
-                                                // pop(sequential_call_method3)
-                                                // push(sequential_call_method2)
-                                                // push(sequential_call_method3)
-                                                // push(sequential_call_method4)
-                                                // pop(sequential_call_method4)
-                                                // pop(sequential_call_method3)
-                                                // pop(sequential_call_method2)
+                                                // push(daisy_chain_method3)
+                                                // push(daisy_chain_method4)
+                                                // pop(daisy_chain_method4)
+                                                // pop(daisy_chain_method3)
+                                                // push(daisy_chain_method2)
+                                                // push(daisy_chain_method3)
+                                                // push(daisy_chain_method4)
+                                                // pop(daisy_chain_method4)
+                                                // pop(daisy_chain_method3)
+                                                // pop(daisy_chain_method2)
                                                 // pop(scenario4)
     std::cout << std::endl;
 
@@ -140,38 +140,38 @@ void scenario2() {
     std::cout << "Exiting scenario2" << std::endl;
 }
 
-void sequential_call_method1() {
-    std::cout << "Entering sequential_call_method1" << std::endl;
-    sequential_call_method2();
-    std::cout << "Exiting sequential_call_method1" << std::endl;
+void daisy_chain_method1() {
+    std::cout << "Entering daisy_chain_method1" << std::endl;
+    daisy_chain_method2();
+    std::cout << "Exiting daisy_chain_method1" << std::endl;
 }
 
-void sequential_call_method2() {
-    std::cout << "Entering sequential_call_method2" << std::endl;
-    sequential_call_method3();
-    std::cout << "Exiting sequential_call_method2" << std::endl;
+void daisy_chain_method2() {
+    std::cout << "Entering daisy_chain_method2" << std::endl;
+    daisy_chain_method3();
+    std::cout << "Exiting daisy_chain_method2" << std::endl;
 }
 
-void sequential_call_method3() {
-    std::cout << "Entering sequential_call_method3" << std::endl;
-    sequential_call_method4();
-    std::cout << "Exiting sequential_call_method3" << std::endl;
+void daisy_chain_method3() {
+    std::cout << "Entering daisy_chain_method3" << std::endl;
+    daisy_chain_method4();
+    std::cout << "Exiting daisy_chain_method3" << std::endl;
 }
 
-void sequential_call_method4() {
-    std::cout << "Entering sequential_call_method4" << std::endl;
-    std::cout << "Exiting sequential_call_method4" << std::endl;
+void daisy_chain_method4() {
+    std::cout << "Entering daisy_chain_method4" << std::endl;
+    std::cout << "Exiting daisy_chain_method4" << std::endl;
 }
 
 void scenario3() {
     std::cout << "Entering scenario3" << std::endl;
-    sequential_call_method1();
+    daisy_chain_method1();
     std::cout << "Exiting scenario3" << std::endl;
 }
 
 void scenario4() {
     std::cout << "Entering scenario4" << std::endl;
-    sequential_call_method3();
-    sequential_call_method2();
+    daisy_chain_method3();
+    daisy_chain_method2();
     std::cout << "Exiting scenario4" << std::endl;
 }
