@@ -123,7 +123,7 @@ void method4() {
 }
 
 void scenario1() {
-    std::cout << "Entering scenario1" << std::endl;
+    std::cout << "In scenario1" << std::endl;
     method1();
     method2();
     method3();
@@ -132,7 +132,7 @@ void scenario1() {
 }
 
 void scenario2() {
-    std::cout << "Entering scenario2" << std::endl;
+    std::cout << "In scenario2" << std::endl;
     method3();
     method2();
     method4();
@@ -141,36 +141,36 @@ void scenario2() {
 }
 
 void daisy_chain_method1() {
-    std::cout << "Entering daisy_chain_method1" << std::endl;
+    std::cout << "In daisy_chain_method1" << std::endl;
     daisy_chain_method2();
     std::cout << "Exiting daisy_chain_method1" << std::endl;
 }
 
 void daisy_chain_method2() {
-    std::cout << "Entering daisy_chain_method2" << std::endl;
+    std::cout << "In daisy_chain_method2" << std::endl;
     daisy_chain_method3();
     std::cout << "Exiting daisy_chain_method2" << std::endl;
 }
 
 void daisy_chain_method3() {
-    std::cout << "Entering daisy_chain_method3" << std::endl;
+    std::cout << "In daisy_chain_method3" << std::endl;
     daisy_chain_method4();
     std::cout << "Exiting daisy_chain_method3" << std::endl;
 }
 
 void daisy_chain_method4() {
-    std::cout << "Entering daisy_chain_method4" << std::endl;
+    std::cout << "In daisy_chain_method4" << std::endl;
     std::cout << "Exiting daisy_chain_method4" << std::endl;
 }
 
 void scenario3() {
-    std::cout << "Entering scenario3" << std::endl;
+    std::cout << "In scenario3" << std::endl;
     daisy_chain_method1();
     std::cout << "Exiting scenario3" << std::endl;
 }
 
 void scenario4() {
-    std::cout << "Entering scenario4" << std::endl;
+    std::cout << "In scenario4" << std::endl;
     daisy_chain_method3();
     daisy_chain_method2();
     std::cout << "Exiting scenario4" << std::endl;
